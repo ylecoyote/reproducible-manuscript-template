@@ -19,8 +19,8 @@ tolerances:
 # The keys (e.g., 'experiment_a') can be anything you want.
 results:
   experiment_a:
-    mean_efficiency: 0.854
-    sample_size: 150
+    mean_efficiency: 0.835
+    sample_size: 100
     p_value_threshold: 0.05
   
   experiment_b:
@@ -34,10 +34,11 @@ results:
 # If 'metadata_file' is provided, it checks the sidecar JSON file against the contract.
 figures:
   required:
-    - filename: "fig1_efficiency_plot.png"
-      generator: "scripts/plot_efficiency.py"
-      metadata_file: "fig1_metadata.json"
+    - filename: "fig1_example.png"
+      generator: "scripts/example_analysis.py"
+      metadata_file: "fig1_example_metadata.json"
 
-    - filename: "fig2_accuracy_comparison.pdf"
-      generator: "scripts/plot_accuracy.py"
-      # metadata_file is optional, but recommended for strict checking
+    # Add your own figures here following this pattern:
+    # - filename: "fig2_your_analysis.pdf"
+    #   generator: "scripts/your_analysis.py"
+    #   metadata_file: "fig2_metadata.json"

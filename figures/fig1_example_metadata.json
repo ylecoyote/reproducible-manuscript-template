@@ -1,12 +1,10 @@
 {
   "figure_id": "fig1_example",
   "generated_by": "scripts/example_analysis.py",
-  "timestamp": "2025-11-19T00:00:00",
+  "timestamp": "2025-11-19T19:35:16.676687",
   "key_values": {
-    "mean_efficiency": 0.854,
+    "mean_efficiency": 0.835,
     "p_value": 0.04,
-    "sample_size": 100,
-    "std_dev": 0.12
-  },
-  "description": "Example metadata template - copy and modify for your figures"
+    "sample_size": 100
+  }
 }
