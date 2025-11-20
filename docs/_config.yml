@@ -1,7 +1,7 @@
 # GitHub Pages configuration for Reproducible Manuscript Template
 
-# Theme
-theme: minimal
+# Theme - using GitHub Pages supported theme
+theme: jekyll-theme-minimal
 
 # Site settings
 title: "Reproducible Manuscript Template"
