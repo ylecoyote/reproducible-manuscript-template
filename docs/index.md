@@ -85,3 +85,28 @@ We have open-sourced this framework as a GitHub Template. You don't need to chan
 3.  **Sleep Soundly:** Know that your manuscript is mathematically consistent.
 
 [**View the Repository & Template**](https://github.com/ylecoyote/reproducible-manuscript-template)
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+  document.addEventListener('DOMContentLoaded', function () {
+    // Find all code blocks marked as 'language-mermaid'
+    var blocks = document.querySelectorAll('pre code.language-mermaid');
+    
+    blocks.forEach(function (block) {
+      // Extract the diagram syntax
+      var graphDefinition = block.innerText;
+      
+      // Create a new div for Mermaid to render into
+      var div = document.createElement('div');
+      div.className = 'mermaid';
+      div.textContent = graphDefinition;
+      
+      // Replace the original code block with the diagram div
+      block.parentNode.replaceWith(div);
+    });
+
+    // Initialize Mermaid
+    mermaid.initialize({ startOnLoad: true });
+  });
+</script>

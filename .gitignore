@@ -107,6 +107,11 @@ htmlcov/
 .dmypy.json
 dmypy.json
 
+# AI models
+.claude/
+.grok/
+.gemini/
+
 # Environment variables
 .env
 .env.local
