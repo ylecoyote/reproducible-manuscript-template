@@ -1,0 +1,21 @@
+# GitHub Pages configuration for Reproducible Manuscript Template
+
+# Theme
+theme: minimal
+
+# Site settings
+title: "Reproducible Manuscript Template"
+description: "Unit Testing for Science - A framework for automated manuscript verification"
+
+# Repository information
+github:
+  repository_url: https://github.com/ylecoyote/reproducible-manuscript-template
+
+# Markdown processing
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Navigation
+show_downloads: true

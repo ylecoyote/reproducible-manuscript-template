@@ -61,6 +61,10 @@ We run a lightweight script that compares your **Raw Data** (CSVs, Logs) against
 
 We install a `pre-commit` hook. If you try to commit changes while the manuscript is inconsistent, **git refuses the commit.**
 
+![Screenshot of git commit failure showing verification errors](assets/failure_screenshot.png)
+
+**Example output when verification fails:**
+
 ```text
 ❌ [DAT_001] Experiment A Efficiency
     Details: Calculated 0.821, Expected 0.854
@@ -83,6 +87,8 @@ We have open-sourced this framework as a GitHub Template. You don't need to chan
 1.  **Clone the Template:** Start your next paper with our structure.
 2.  **Define your Claims:** Fill out the YAML file.
 3.  **Sleep Soundly:** Know that your manuscript is mathematically consistent.
+
+👉 [**Read the Step-by-Step Tutorial**](./tutorial)
 
 [**View the Repository & Template**](https://github.com/ylecoyote/reproducible-manuscript-template)
 
