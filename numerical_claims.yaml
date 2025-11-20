@@ -1,0 +1,43 @@
+# numerical_claims.yaml
+# The Contract: All numerical values in the manuscript must derive from here.
+# Usage: Edit this file to reflect your latest results.
+
+metadata:
+  project_name: "My Reproducible Paper"
+  version: "1.0.0"
+  last_updated: "2025-11-19"
+
+# Global tolerances for floating point comparisons
+# This prevents tests from failing due to tiny rounding errors (e.g., 1.000001 vs 1.0)
+tolerances:
+  absolute: 0.001   # For direct value comparisons
+  percent: 0.05     # 5% tolerance for rough checks
+  statistical: 0.05 # p-value thresholds or sigma
+
+# Section 1: Core Experimental Results
+# Replace these with your specific domain data.
+# The keys (e.g., 'experiment_a') can be anything you want.
+results:
+  experiment_a:
+    mean_efficiency: 0.854
+    sample_size: 150
+    p_value_threshold: 0.05
+  
+  experiment_b:
+    # You can verify derived values (e.g. improvement over baseline)
+    baseline_accuracy: 65.2
+    our_accuracy: 88.4
+    improvement_factor: 1.35  # (88.4 / 65.2)
+
+# Section 2: Figure Requirements
+# The verifier checks if these files exist.
+# If 'metadata_file' is provided, it checks the sidecar JSON file against the contract.
+figures:
+  required:
+    - filename: "fig1_efficiency_plot.png"
+      generator: "scripts/plot_efficiency.py"
+      metadata_file: "fig1_metadata.json"
+
+    - filename: "fig2_accuracy_comparison.pdf"
+      generator: "scripts/plot_accuracy.py"
+      # metadata_file is optional, but recommended for strict checking

@@ -1,0 +1,15 @@
+# .pre-commit-config.yaml
+# Automatically verify manuscript consistency before every commit.
+# Install: pip install pre-commit && pre-commit install
+
+repos:
+  - repo: local
+    hooks:
+      - id: verify-manuscript
+        name: Verify Manuscript Consistency
+        entry: python3 verify_manuscript.py
+        language: system
+        pass_filenames: false
+        always_run: true
+        verbose: true
+        description: "Ensures numerical claims in YAML match data and figures."
